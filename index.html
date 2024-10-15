@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Payment Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <div
+      id="paymentForm"
+      class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6"
+    >
+      <!-- Header -->
+      <div class="flex justify-between items-center mb-4">
+        <div class="text-green-600">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="text-green-600 font-semibold">xxx XOF</div>
+      </div>
+
+      <!-- Les options de paiement seront insérées dynamiquement ici -->
+      <div id="paymentOptions" class="grid grid-cols-3 gap-4 mb-4"></div>
+
+      <!-- Les détails du paiement seront insérés dynamiquement ici -->
+      <div id="paymentDetails" class="hidden"></div>
+
+      <!-- Footer -->
+      <div class="text-center text-sm text-gray-500 mt-4">
+        Sécurisé <span class="text-green-600">par MoneyFusion</span>
+      </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
